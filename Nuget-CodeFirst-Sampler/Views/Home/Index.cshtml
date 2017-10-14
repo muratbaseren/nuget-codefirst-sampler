@@ -3,17 +3,74 @@
     ViewBag.Title = "Index";
 }
 
+<style>
+    .highlight {
+        background-color: #ffd800;
+    }
+</style>
+
 <h2>ASP.NET MVC CodeFirst Sample App</h2>
 <hr />
 <p>
-    <div class="alert alert-warning"><i>You can use menu to show datas.</i></div>
+    <div class="alert alert-warning"><span class="glyphicon glyphicon-hand-up">&nbsp;</span><i>You can use menu to show all data.</i></div>
 </p>
 <div class="well">
-    You can use below line codes for <b>Automatic Migration</b>.<br /><br />
-    Write to <b>Package Manager Console</b><br />
+    <h3>
+        Enable Automatic Migrate
+    </h3>
+    <p>
+        You can use below line codes for <b>Automatic Migration</b>.
+        Write to <b>Package Manager Console</b>
+    </p>
+    <br /><br />
+
     <ol>
         <li>Enable-Migrations -EnableAutomaticMigrations</li>
         <li>Update-Database</li>
+    </ol>
+</div>
+
+<div class="well">
+
+    <h3>
+        Migrate Database to Lastest Version
+    </h3>
+    <p>
+        If you want to migrate database to lastest version everytime after changes models. It makes that is made with itself.
+    </p>
+    <br /><br />
+    <ol>
+        <li>
+            <p><b>You must add this line of code to constructor of Configuration.cs class into Migration folder.</b></p>
+            <pre>
+    public Configuration()
+    {
+        AutomaticMigrationsEnabled = true;
+            <b class="highlight">AutomaticMigrationDataLossAllowed = true;</b>
+        ContextKey = "WebApplication26.Context.DatabaseContext";
+    }
+</pre><br /><br />
+        </li>
+        <li>
+            <p><b>After that, you must add this line of code to constructor of DatabaseContext.cs class into Context folder.</b></p>
+            <pre>
+    public class DatabaseContext : DbContext
+    {
+        public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        
+        public DatabaseContext()
+        {
+            <b class="highlight">Database.SetInitializer(new MigrateDatabaseToLatestVersion<DatabaseContext, Migrations.Configuration>());</b>
+            Database.SetInitializer(new MyInitializer());
+        }
+    }
+</pre>
+            <p>
+                That's it. Cheers..
+            </p>
+        </li>
     </ol>
 </div>
 
