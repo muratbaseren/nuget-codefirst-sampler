@@ -26,7 +26,7 @@
     <file src="Context\*.*" target="content\net452\Context" />
     <file src="Controllers\*.*" target="content\net452\Controllers" />
     <file src="Models\*.*" target="content\net452\Models" />
-    <file src="Views\**\*.*" target="content\net452\Views" />
+    <file src="Views\**\*.*" target="content\net452\Views" exclude="web.config" />
     <file src="web.config.install.xdt" target="content\net452\web.config.install.xdt" />
     <file src="web.config.uninstall.xdt" target="content\net452\web.config.uninstall.xdt" />
   </files>
