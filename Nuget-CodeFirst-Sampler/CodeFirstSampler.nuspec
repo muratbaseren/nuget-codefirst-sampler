@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SampleCodeFirstCodes</id>
+    <version>$version$</version>
+    <authors>Kadir Murat Başeren</authors>
+    <title>Sample CodeFirst Codes</title>
+    <owners>Kadir Murat Başeren</owners>
+    <projectUrl>https://github.com/muratbaseren/Nuget-CodeFirst-Sampler</projectUrl>
+    <description>This package includes sample controllers, models, views for asp.net mvc codefirst project. Also it will generate sample data for database.</description>
+    <summary>Sample CodeFirst Project that inclodes Customers, Products, Categories Controllers and those views.</summary>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>aspnet,mvc,codefirst,entityframework,sample codes,controllers,views,models,bootstrap,jquery,fakedata,migration</tags>
+    <copyright>Copyright 2017 Kadir Murat Başeren</copyright>
+    <group targetFramework=".NETFramework4.5.2">
+      <dependency id="EntityFramework" version="6.1.3" />
+      <dependency id="jQuery" version="3.1.1" />
+      <dependency id="bootstrap" version="3.3.7" />
+      <dependency id="FakeData" version="1.0.0" />
+    </group>
+  </metadata>
+</package>
