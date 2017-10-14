@@ -23,34 +23,34 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="content\net452\Context\DatabaseContext.cs" target="content\net452\Context\DatabaseContext.cs.pp" />
-    <file src="content\net452\Context\MyInitializer.cs" target="content\net452\Context\MyInitializer.cs.pp" />
-    <file src="content\net452\Controllers\CategoryController.cs" target="content\net452\Controllers\CategoryController.cs.pp" />
-    <file src="content\net452\Controllers\CustomerController.cs" target="content\net452\Controllers\CustomerController.cs.pp" />
-    <file src="content\net452\Controllers\HomeController.cs" target="content\net452\Controllers\HomeController.cs.pp" />
-    <file src="content\net452\Controllers\ProductController.cs" target="content\net452\Controllers\ProductController.cs.pp" />
-    <file src="content\net452\Models\Category.cs" target="content\net452\Models\Category.cs.pp" />
-    <file src="content\net452\Models\Customer.cs" target="content\net452\Models\Customer.cs.pp" />
-    <file src="content\net452\Models\Product.cs" target="content\net452\Models\Product.cs.pp" />
-    <file src="content\net452\Views\Category\Create.cshtml" target="content\net452\Views\Category\Create.cshtml.pp" />
-    <file src="content\net452\Views\Category\Delete.cshtml" target="content\net452\Views\Category\Delete.cshtml.pp" />
-    <file src="content\net452\Views\Category\Details.cshtml" target="content\net452\Views\Category\Details.cshtml.pp" />
-    <file src="content\net452\Views\Category\Edit.cshtml" target="content\net452\Views\Category\Edit.cshtml.pp" />
-    <file src="content\net452\Views\Category\Index.cshtml" target="content\net452\Views\Category\Index.cshtml.pp" />
-    <file src="content\net452\Views\Customer\Create.cshtml" target="content\net452\Views\Customer\Create.cshtml.pp" />
-    <file src="content\net452\Views\Customer\Delete.cshtml" target="content\net452\Views\Customer\Delete.cshtml.pp" />
-    <file src="content\net452\Views\Customer\Details.cshtml" target="content\net452\Views\Customer\Details.cshtml.pp" />
-    <file src="content\net452\Views\Customer\Edit.cshtml" target="content\net452\Views\Customer\Edit.cshtml.pp" />
-    <file src="content\net452\Views\Customer\Index.cshtml" target="content\net452\Views\Customer\Index.cshtml.pp" />
-    <file src="content\net452\Views\Home\Index.cshtml" target="content\net452\Views\Home\Index.cshtml.pp" />
-    <file src="content\net452\Views\Product\Create.cshtml" target="content\net452\Views\Product\Create.cshtml.pp" />
-    <file src="content\net452\Views\Product\Delete.cshtml" target="content\net452\Views\Product\Delete.cshtml.pp" />
-    <file src="content\net452\Views\Product\Details.cshtml" target="content\net452\Views\Product\Details.cshtml.pp" />
-    <file src="content\net452\Views\Product\Edit.cshtml" target="content\net452\Views\Product\Edit.cshtml.pp" />
-    <file src="content\net452\Views\Product\Index.cshtml" target="content\net452\Views\Product\Index.cshtml.pp" />
-    <file src="content\net452\Views\Shared\_Layout.cshtml" target="content\net452\Views\Shared\_Layout.cshtml" />
-    <file src="content\net452\Views\_ViewStart.cshtml" target="content\net452\Views\_ViewStart.cshtml" />
-    <file src="content\net452\web.config.install.xdt" target="content\net452\web.config.install.xdt" />
-    <file src="content\net452\web.config.uninstall.xdt" target="content\net452\web.config.uninstall.xdt" />
+    <file src="Context\DatabaseContext.cs" target="content\net452\Context\DatabaseContext.cs.pp" />
+    <file src="Context\MyInitializer.cs" target="content\net452\Context\MyInitializer.cs.pp" />
+    <file src="Controllers\CategoryController.cs" target="content\net452\Controllers\CategoryController.cs.pp" />
+    <file src="Controllers\CustomerController.cs" target="content\net452\Controllers\CustomerController.cs.pp" />
+    <file src="Controllers\HomeController.cs" target="content\net452\Controllers\HomeController.cs.pp" />
+    <file src="Controllers\ProductController.cs" target="content\net452\Controllers\ProductController.cs.pp" />
+    <file src="Models\Category.cs" target="content\net452\Models\Category.cs.pp" />
+    <file src="Models\Customer.cs" target="content\net452\Models\Customer.cs.pp" />
+    <file src="Models\Product.cs" target="content\net452\Models\Product.cs.pp" />
+    <file src="Views\Category\Create.cshtml" target="content\net452\Views\Category\Create.cshtml.pp" />
+    <file src="Views\Category\Delete.cshtml" target="content\net452\Views\Category\Delete.cshtml.pp" />
+    <file src="Views\Category\Details.cshtml" target="content\net452\Views\Category\Details.cshtml.pp" />
+    <file src="Views\Category\Edit.cshtml" target="content\net452\Views\Category\Edit.cshtml.pp" />
+    <file src="Views\Category\Index.cshtml" target="content\net452\Views\Category\Index.cshtml.pp" />
+    <file src="Views\Customer\Create.cshtml" target="content\net452\Views\Customer\Create.cshtml.pp" />
+    <file src="Views\Customer\Delete.cshtml" target="content\net452\Views\Customer\Delete.cshtml.pp" />
+    <file src="Views\Customer\Details.cshtml" target="content\net452\Views\Customer\Details.cshtml.pp" />
+    <file src="Views\Customer\Edit.cshtml" target="content\net452\Views\Customer\Edit.cshtml.pp" />
+    <file src="Views\Customer\Index.cshtml" target="content\net452\Views\Customer\Index.cshtml.pp" />
+    <file src="Views\Home\Index.cshtml" target="content\net452\Views\Home\Index.cshtml.pp" />
+    <file src="Views\Product\Create.cshtml" target="content\net452\Views\Product\Create.cshtml.pp" />
+    <file src="Views\Product\Delete.cshtml" target="content\net452\Views\Product\Delete.cshtml.pp" />
+    <file src="Views\Product\Details.cshtml" target="content\net452\Views\Product\Details.cshtml.pp" />
+    <file src="Views\Product\Edit.cshtml" target="content\net452\Views\Product\Edit.cshtml.pp" />
+    <file src="Views\Product\Index.cshtml" target="content\net452\Views\Product\Index.cshtml.pp" />
+    <file src="Views\Shared\_Layout.cshtml" target="content\net452\Views\Shared\_Layout.cshtml" />
+    <file src="Views\_ViewStart.cshtml" target="content\net452\Views\_ViewStart.cshtml" />
+    <file src="web.config.install.xdt" target="content\net452\web.config.install.xdt" />
+    <file src="web.config.uninstall.xdt" target="content\net452\web.config.uninstall.xdt" />
   </files>
 </package>
