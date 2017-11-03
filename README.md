@@ -1,4 +1,9 @@
-# Nuget-CodeFirst-Sampler
+# Code First Sampler
+
+| Build server| Platform       | Status      |
+|-------------|----------------|-------------|
+| AppVeyor    | Windows        |[![Build status](https://ci.appveyor.com/api/projects/status/c42xi7pbqa601bto?svg=true)](https://ci.appveyor.com/project/muratbaseren/nuget-codefirst-sampler) |
+
 This project includes sample controllers, models, views for asp.net mvc codefirst project. Also it will generate sample data for database. This project is applied [SampleCodeFirstCodes](https://www.nuget.org/packages/SampleCodeFirstCodes/) from nuget.org.
 
 Firstly, you should create **Empty Aspnet MVC Project** and install package from Nuget on Visual Studio. 
