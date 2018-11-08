@@ -20,6 +20,15 @@ namespace Nuget_CodeFirst_Sampler.Controllers
             return View(db.Categories.ToList());
         }
 
+        public ActionResult Search(string keyword)
+        {
+            List<Category> categories = db.Categories
+                .Where(x => x.Name.Contains(keyword) || x.Description.Contains(keyword))
+                .ToList();
+
+            return View("Index", categories);
+        }
+
         public ActionResult Details(int? id)
         {
             if (id == null)

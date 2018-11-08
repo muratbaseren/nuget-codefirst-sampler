@@ -20,6 +20,19 @@ namespace Nuget_CodeFirst_Sampler.Controllers
             return View(db.Customers.ToList());
         }
 
+        public ActionResult Search(string keyword)
+        {
+            List<Customer> customers = db.Customers
+                .Where(x => 
+                    x.Name.Contains(keyword) || 
+                    x.Surname.Contains(keyword) || 
+                    x.Birthdate.ToShortDateString().Contains(keyword) || 
+                    x.Email.Contains(keyword))
+                .ToList();
+
+            return View("Index", customers);
+        }
+
         public ActionResult Details(int? id)
         {
             if (id == null)

@@ -21,6 +21,19 @@ namespace Nuget_CodeFirst_Sampler.Controllers
             return View(products.ToList());
         }
 
+        public ActionResult Search(string keyword)
+        {
+            List<Product> products = db.Products.Include("Category")
+                .Where(x =>
+                    x.Name.Contains(keyword) ||
+                    x.Category.Name.Contains(keyword) ||
+                    x.Amount.ToString().Contains(keyword) ||
+                    x.Price.ToString().Contains(keyword))
+                .ToList();
+
+            return View("Index", products);
+        }
+
         public ActionResult Details(int? id)
         {
             if (id == null)

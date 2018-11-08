@@ -22,6 +22,7 @@ namespace Nuget_CodeFirst_Sampler.Models
         [EmailAddress, StringLength(50)]
         public string Email { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:dd.MM.yyyy}")]
         public DateTime Birthdate { get; set; }
     }
 }
