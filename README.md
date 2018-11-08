@@ -16,8 +16,35 @@ Firstly, you should create **Empty Aspnet MVC Project** and install package from
 >  4. Also DatabaseContext and Initializer that has generate sample data
 >     when database created.
 
-**Views are modified.** They have bootstrap icons for create, edit, delete. Page links are added to layout menu.
+**Views are modified.** They have bootstrap 4 icons for create, edit, delete. Page links are added to layout menu and have modal.
+
+# Nuget
 
 You can use **Nuget Package Manager**. Write the below code to package manager console after created project on visual studio.
 
 > Install-Package **SampleCodeFirstCodes**
+
+# ScreenShots
+
+### Home page : Migration tricks
+
+![](https://github.com/muratbaseren/Nuget-CodeFirst-Sampler/blob/master/screenshots/01_home-page-how-i-do-migration.png?raw=true)
+
+### Index page
+
+![](https://github.com/muratbaseren/Nuget-CodeFirst-Sampler/blob/master/screenshots/02_index-page.png?raw=true)
+
+### Modal Details into Index Page
+![](https://github.com/muratbaseren/Nuget-CodeFirst-Sampler/blob/master/screenshots/03_index-page-details-modal.png?raw=true)
+
+### Create Page
+![](https://github.com/muratbaseren/Nuget-CodeFirst-Sampler/blob/master/screenshots/04_create-page.png?raw=true)
+
+### Edit Page
+![](https://github.com/muratbaseren/Nuget-CodeFirst-Sampler/blob/master/screenshots/05_edit-page.png?raw=true)
+
+### Details Page
+![](https://github.com/muratbaseren/Nuget-CodeFirst-Sampler/blob/master/screenshots/06_details-page.png?raw=true)
+
+### Delete Page
+![](https://github.com/muratbaseren/Nuget-CodeFirst-Sampler/blob/master/screenshots/07_delete-page.png?raw=true)
