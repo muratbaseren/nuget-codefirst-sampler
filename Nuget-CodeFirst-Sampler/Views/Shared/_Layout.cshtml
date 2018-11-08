@@ -7,49 +7,66 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
+
+    @RenderSection("_Styles", false)
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="@Url.Action("Index","Customer")">
-                            <span class="glyphicon glyphicon-user"></span> Customer
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("Index","Category")">
-                            <span class="glyphicon glyphicon-list"></span> Category
-                        </a>
-                    </li>
-                    <li>
-                        <a href="@Url.Action("Index","Product")">
-                            <span class="glyphicon glyphicon-pawn"></span> Product
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        @Html.ActionLink("CodeFirst Sample App", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="container body-content">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a href="@Url.Action("Index","Customer")" class="nav-link">
+                        <span class="fa fa-user"></span> Customer
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Index","Category")" class="nav-link">
+                        <span class="fa fa-list"></span> Category
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="@Url.Action("Index","Product")" class="nav-link">
+                        <span class="fa fa-shopping-basket"></span> Product
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="fa fa-dropbox"></span> Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="@Url.Action("Index","Customer")"><span class="fa fa-user"></span> Customer</a>
+                        <a class="dropdown-item" href="@Url.Action("Index","Category")"><span class="fa fa-list"></span> Category</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="@Url.Action("Index","Product")"><span class="fa fa-shopping-basket"></span> Product</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" method="post" action="@Url.Action("Search")">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" name="keyword" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="javascript: $(this).closest('form').submit();">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container body-content mt-4">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - ASP.NET MVC CodeFirst Sample App</p>
+            <p><span class="fa fa-github"></span> <a href="https://github.com/muratbaseren/Nuget-CodeFirst-Sampler" target="_blank">View on GitHub</a> &copy; @DateTime.Now.Year - ASP.NET MVC CodeFirst Sample App. Designed by <a href="https://muratbaseren.wordpress.com" target="_blank">K.Murat Başeren</a></p>
         </footer>
     </div>
+
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    @RenderSection("_Scripts", false)
 </body>
 </html>

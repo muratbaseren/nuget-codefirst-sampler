@@ -10,17 +10,30 @@ namespace Nuget_CodeFirst_Sampler.Context
     {
         protected override void Seed(DatabaseContext context)
         {
-            for (int i = 0; i < 10; i++)
+            InsertCategories(context);
+            InsertProducts(context);
+            InsertCustomers(context);
+        }
+
+        private static void InsertCustomers(DatabaseContext context)
+        {
+            for (int i = 0; i < 30; i++)
             {
-                context.Categories.Add(new Category()
+                context.Customers.Add(new Customer()
                 {
-                    Name = FakeData.NameData.GetCompanyName(),
-                    Description = FakeData.TextData.GetSentence()
+                    Name = FakeData.NameData.GetFirstName(),
+                    Surname = FakeData.NameData.GetSurname(),
+                    Email = FakeData.NetworkData.GetEmail(),
+                    Birthdate = FakeData.DateTimeData.GetDatetime(
+                         new DateTime(1940, 1, 1), new DateTime(1990, 12, 31))
                 });
             }
 
             context.SaveChanges();
+        }
 
+        private static void InsertProducts(DatabaseContext context)
+        {
             foreach (Category cat in context.Categories)
             {
                 for (int i = 0; i < FakeData.NumberData.GetNumber(5, 10); i++)
@@ -35,16 +48,16 @@ namespace Nuget_CodeFirst_Sampler.Context
             }
 
             context.SaveChanges();
+        }
 
-            for (int i = 0; i < 30; i++)
+        private static void InsertCategories(DatabaseContext context)
+        {
+            for (int i = 0; i < 10; i++)
             {
-                context.Customers.Add(new Customer()
+                context.Categories.Add(new Category()
                 {
-                    Name = FakeData.NameData.GetFirstName(),
-                    Surname = FakeData.NameData.GetSurname(),
-                    Email = FakeData.NetworkData.GetEmail(),
-                    Birthdate = FakeData.DateTimeData.GetDatetime(
-                         new DateTime(1940, 1, 1), new DateTime(1990, 12, 31))
+                    Name = FakeData.NameData.GetCompanyName(),
+                    Description = FakeData.TextData.GetSentence()
                 });
             }
 

@@ -1,15 +1,15 @@
 ﻿@model IEnumerable<Nuget_CodeFirst_Sampler.Models.Customer>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Customers";
 }
 
-<h2>Index</h2>
+<h2 class="mb-5">@ViewBag.Title</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary" })
 </p>
-<table class="table">
+<table class="table table-hover">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
@@ -41,15 +41,68 @@
             @Html.DisplayFor(modelItem => item.Birthdate)
         </td>
         <td>
-            <a href="@Url.Action("Edit",new { id=item.Id })" class="btn btn-warning btn-xs">
-                <span class="glyphicon glyphicon-edit"></span>
+            <a href="@Url.Action("Edit",new { id=item.Id })" class="btn btn-warning btn-sm">
+                <span class="fa fa-pencil"></span>
             </a>
-            <a href="@Url.Action("Details",new { id=item.Id })" class="btn btn-info btn-xs">
-                <span class="glyphicon glyphicon-search"></span>
+            <a href="@Url.Action("Details",new { id=item.Id })" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modal@(item.Id)">
+                <span class="fa fa-search"></span>
             </a>
-            <a href="@Url.Action("Delete",new { id=item.Id })" class="btn btn-danger btn-xs">
-                <span class="glyphicon glyphicon-remove"></span>
+            <a href="@Url.Action("Delete",new { id=item.Id })" class="btn btn-danger btn-sm">
+                <span class="fa fa-remove"></span>
             </a>
+
+            <div class="modal fade" tabindex="-1" role="dialog" id="modal@(item.Id)">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <dl class="row">
+                                <dt class="col-4">
+                                    @Html.DisplayNameFor(model => model.Name)
+                                </dt>
+
+                                <dd class="col-8">
+                                    @Html.DisplayFor(model => item.Name)
+                                </dd>
+
+                                <dt class="col-4">
+                                    @Html.DisplayNameFor(model => model.Surname)
+                                </dt>
+
+                                <dd class="col-8">
+                                    @Html.DisplayFor(model => item.Surname)
+                                </dd>
+
+                                <dt class="col-4">
+                                    @Html.DisplayNameFor(model => model.Email)
+                                </dt>
+
+                                <dd class="col-8">
+                                    @Html.DisplayFor(model => item.Email)
+                                </dd>
+
+                                <dt class="col-4">
+                                    @Html.DisplayNameFor(model => model.Birthdate)
+                                </dt>
+
+                                <dd class="col-8">
+                                    @Html.DisplayFor(model => item.Birthdate)
+                                </dd>
+
+                            </dl>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal"><span class="fa fa-close"></span> Close</button>
+                            <a href="@Url.Action("Details",new { item.Id })" class="btn btn-primary"><span class="fa fa-external-link"></span> Show on page</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </td>
     </tr>
 }
