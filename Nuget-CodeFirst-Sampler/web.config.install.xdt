@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
   <connectionStrings xdt:Transform="InsertIfMissing">
-    <add name="DatabaseContext" connectionString="Server=(localdb)\mssqllocaldb;Database=$rootnamespace$DB;Trusted_Connection=true;MultipleActiveResultSets=true" providerName="System.Data.SqlClient" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing" />
+    <add name="DatabaseContext" connectionString="Server=(localdb)\mssqllocaldb;Database=$rootnamespace$_SampleDB;Trusted_Connection=true;MultipleActiveResultSets=true" providerName="System.Data.SqlClient" xdt:Locator="Match(name)" xdt:Transform="InsertIfMissing" />
   </connectionStrings>
   <system.web>
     <globalization culture="tr-TR" uiCulture="tr-TR" xdt:Transform="InsertIfMissing"/>

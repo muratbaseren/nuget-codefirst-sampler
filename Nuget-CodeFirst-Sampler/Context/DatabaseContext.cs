@@ -1,9 +1,5 @@
 ﻿using Nuget_CodeFirst_Sampler.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Web;
 
 namespace Nuget_CodeFirst_Sampler.Context
 {
@@ -15,7 +11,7 @@ namespace Nuget_CodeFirst_Sampler.Context
 
         public DatabaseContext()
         {
-            Database.SetInitializer(new MyInitializer());
+            Database.SetInitializer(new DatabaseInitializer());
         }
     }
 }

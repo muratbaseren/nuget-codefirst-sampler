@@ -1,14 +1,18 @@
 ﻿using Nuget_CodeFirst_Sampler.Models;
-using System.Data.Entity;
 using System;
-using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace Nuget_CodeFirst_Sampler.Context
 {
-    public class MyInitializer : CreateDatabaseIfNotExists<DatabaseContext>
+    public class DatabaseInitializer : CreateDatabaseIfNotExists<DatabaseContext>
     {
         protected override void Seed(DatabaseContext context)
+        {
+            InsertSeedData(context);
+        }
+
+        public static void InsertSeedData(DatabaseContext context)
         {
             InsertCategories(context);
             InsertProducts(context);
@@ -17,6 +21,8 @@ namespace Nuget_CodeFirst_Sampler.Context
 
         private static void InsertCustomers(DatabaseContext context)
         {
+            if (context.Customers.Any()) return;
+
             for (int i = 0; i < 30; i++)
             {
                 context.Customers.Add(new Customer()
@@ -34,6 +40,8 @@ namespace Nuget_CodeFirst_Sampler.Context
 
         private static void InsertProducts(DatabaseContext context)
         {
+            if (context.Products.Any()) return;
+
             foreach (Category cat in context.Categories)
             {
                 for (int i = 0; i < FakeData.NumberData.GetNumber(5, 10); i++)
@@ -52,6 +60,8 @@ namespace Nuget_CodeFirst_Sampler.Context
 
         private static void InsertCategories(DatabaseContext context)
         {
+            if (context.Categories.Any()) return;
+
             for (int i = 0; i < 10; i++)
             {
                 context.Categories.Add(new Category()
