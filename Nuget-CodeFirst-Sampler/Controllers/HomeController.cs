@@ -12,5 +12,10 @@ namespace Nuget_CodeFirst_Sampler.Controllers
             db.Customers.ToList();
             return View();
         }
+
+        public ActionResult About()
+        {
+            return View();
+        }
     }
 }

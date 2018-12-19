@@ -109,6 +109,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\img\murat-baseren.jpg" />
+    <Content Include="Assets\img\murat-baseren-udemy.png" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
@@ -218,6 +220,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Home\About.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

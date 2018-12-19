@@ -24,7 +24,7 @@ namespace Nuget_CodeFirst_Sampler.Controllers
                 .Where(x => 
                     x.Name.Contains(keyword) || 
                     x.Surname.Contains(keyword) || 
-                    x.Birthdate.ToShortDateString().Contains(keyword) || 
+                    x.Birthdate.ToString().Contains(keyword) || 
                     x.Email.Contains(keyword))
                 .ToList();
 
