@@ -27,8 +27,8 @@
   <files>
     <file src="Assets\**\*.*" target="content\Assets" />
     <file src="Context\**\*.*" target="content\Context" />
-    <file src="Content\**\*.*" target="content\Content" />
-    <file src="Scripts\**\*.*" target="content\Scripts" />
+    <!--<file src="Content\**\*.*" target="content\Content" />-->
+    <!--<file src="Scripts\**\*.*" target="content\Scripts" />-->
     <file src="Controllers\**\*.*" target="content\Controllers" />
     <file src="Models\**\*.*" target="content\Models" />
     <file src="Views\**\*.*" target="content\Views" />
