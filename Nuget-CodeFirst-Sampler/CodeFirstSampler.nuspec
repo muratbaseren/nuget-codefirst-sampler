@@ -12,9 +12,9 @@
     <summary>Sample CodeFirst Project that includes Customers, Products, Categories Controllers and their views.</summary>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>aspnet,mvc,codefirst,entityframework,sample codes,automapper,bootstrap,jquery,fakedata,migration</tags>
-    <copyright>Copyright 2017 Kadir Murat Başeren</copyright>
+    <copyright>Copyright Kadir Murat Başeren</copyright>
     <dependencies>
-      <group targetFramework=".NETFramework4.5.2">
+      <group>
         <dependency id="EntityFramework" version="6.2.0" />
         <dependency id="jQuery" version="3.3.1" />
         <dependency id="bootstrap" version="4.1.3" />
@@ -25,14 +25,15 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="Assets\**\*.*" target="content\net452\Assets" />
-    <file src="Context\*.*" target="content\net452\Context" />
-    <file src="Scripts\**\*.*" target="content\net452\Content" />
-    <file src="Controllers\*.*" target="content\net452\Controllers" />
-    <file src="Models\*.*" target="content\net452\Models" />
-    <file src="Views\**\*.*" target="content\net452\Views" exclude="Views\web.config" />
-    <file src="web.config.install.xdt" target="content\net452\web.config.install.xdt" />
-    <file src="web.config.uninstall.xdt" target="content\net452\web.config.uninstall.xdt" />
+    <file src="Assets\**\*.*" target="content\Assets" />
+    <file src="Context\**\*.*" target="content\Context" />
+    <file src="Content\**\*.*" target="content\Content" />
+    <file src="Scripts\**\*.*" target="content\Scripts" />
+    <file src="Controllers\**\*.*" target="content\Controllers" />
+    <file src="Models\**\*.*" target="content\Models" />
+    <file src="Views\**\*.*" target="content\Views" />
+    <file src="web.config.install.xdt" target="content\web.config.install.xdt" />
+    <file src="web.config.uninstall.xdt" target="content\web.config.uninstall.xdt" />
   </files>
 </package>
 
