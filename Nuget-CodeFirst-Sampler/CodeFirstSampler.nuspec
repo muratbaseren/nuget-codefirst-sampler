@@ -25,6 +25,7 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="Assets\**\*.*" target="content\net452\Assets" />
     <file src="Context\*.*" target="content\net452\Context" />
     <file src="Scripts\**\*.*" target="content\net452\Content" />
     <file src="Controllers\*.*" target="content\net452\Controllers" />
