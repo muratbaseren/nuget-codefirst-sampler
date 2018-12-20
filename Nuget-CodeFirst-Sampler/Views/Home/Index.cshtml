@@ -24,7 +24,7 @@
     </p>
     <br /><br />
 
-    <ol>
+    <ol class="bg-light">
         <li>Enable-Migrations -EnableAutomaticMigrations</li>
         <li>Update-Database</li>
     </ol>
@@ -42,7 +42,7 @@
     <ol>
         <li>
             <p><b>You must add this line of code to constructor of Configuration.cs class into Migration folder.</b></p>
-            <pre>
+            <pre class="bg-light">
     public Configuration()
     {
         AutomaticMigrationsEnabled = true;
@@ -53,17 +53,17 @@
         </li>
         <li>
             <p><b>After that, you must add this line of code to constructor of DatabaseContext.cs class into Context folder.</b></p>
-            <pre>
+            <pre class="bg-light">
     public class DatabaseContext : DbContext
     {
-        public DbSet<Category> Categories { get; set; }
-        public DbSet<Product> Products { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        
+        public DbSet&lt;Category&gt; Categories { get; set; }
+        public DbSet&lt;Product&gt; Products { get; set; }
+        public DbSet&lt;Customer&gt; Customers { get; set; }
+
         public DatabaseContext()
         {
-            <b class="highlight">Database.SetInitializer(new MigrateDatabaseToLatestVersion<DatabaseContext, Migrations.Configuration>());</b>
-            Database.SetInitializer(new MyInitializer());
+            <b class="highlight">Database.SetInitializer(new MigrateDatabaseToLatestVersion&lt;DatabaseContext, Migrations.Configuration&gt;());</b>
+            // Database.SetInitializer(new MyInitializer());
         }
     }
 </pre>
